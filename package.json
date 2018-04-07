@@ -1,26 +1,16 @@
 {
-  "name": "week1-homework-dyslexias",
-  "version": "1.0.0",
-  "description": "",
-  "main": "translation.js",
+  "name": "week2-homework-group-d",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ST2DE/week1-homework-DyslexiaS.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ST2DE/week1-homework-DyslexiaS/issues"
-  },
-  "homepage": "https://github.com/ST2DE/week1-homework-DyslexiaS#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "node-sass": "^4.8.3",
-    "path": "^0.12.7",
-    "pug": "^2.0.3",
-    "sass": "^1.1.1"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
   }
 }
