@@ -1,10 +1,11 @@
 {
   "name": "week1-homework-dyslexias",
   "version": "1.0.0",
-  "description": "",
+  "description": "| 規則 | 說明 |\r |---|---|\r | 分組 | 以助教為分組單位 |\r | 製作頁數 | 小組人數 + 1 ( 不含教助 ) |\r | 每一頁 | 最上面需要有 Navbar 且每個頁面的 Navbar 風格需一致\r | Navbar 內容 | 有 `首頁` 、 `各學員稱呼` 且以超連結呈現 |\r | 首頁 | 各學員 `放一張圖片` 加 對這兩周課程的建議或想說的 |\r | 學員個人頁 | 將上周作業 git 資料整理成 HTML ， 可以 CSS 、 JS 修飾 |",
   "main": "translation.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/ST2DE/week1-homework-DyslexiaS#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "express-generator": "^4.16.0",
     "node-sass": "^4.8.3",
     "path": "^0.12.7",
     "pug": "^2.0.3",
