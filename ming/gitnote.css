@@ -32,8 +32,6 @@ ul, ol {
   z-index: 9999;
   position: fixed;
   top: 0;
-  height: 65px;
-  transition: top .4s ease-in-out;
   width: 100%; }
 
 .nav-custom {
@@ -75,8 +73,6 @@ li a {
     background: transparent;
     color: #7bc3d1;
     outline: 0; }
-
-
 .container {
   margin-top:80px;
 }
