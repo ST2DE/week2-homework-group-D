@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ming's Git學習筆記</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./gitnote.css">
+</head>
+<body>
+    <div id="nav">
+        <nav class="navbar nav-custom">
+            <div class="navbar-header"><a class="nav-home page-scroll" href="#">D.Team</a></div>
+            <!--Collect the nav links, forms, and other content for toggling-->
+            <div class="navbar-right">
+            <ul>
+                <li><a class="page-scroll" href="">Haikyo  </a></li>
+                <li><a class="page-scroll" href="">Tweety  </a></li>
+                <li><a class="page-scroll" href="./ming/gitnote.html">Ming  </a></li>
+                <li><a class="page-scroll" href="">Donna  </a></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h1 class="text-info mb-3 text-center">Ming's Git 學習筆記</h1>
+        <div id="side-bar-menu">
+        <ul>
+            <li><a href="#section1">開始之前</a>
+                <ul>
+                    <li>設定你是誰</li>
+                    <li>檢視設定</li>
+                </ul>
+            </li>
+            <li><a href="#section2">建立或取得Git Repository</a>
+                <ul>
+                    <li>於當前位子建立 Repository</li>
+                    <li>複製遠端 Repository 至本機</li>
+                </ul>
+            </li>
+            <li><a href="#section3">新增檔案</a>
+                <ul>
+                    <li>將指定檔案add進stage</li>
+                    <li>add錯檔案想取消（unstage）</li>
+                    <li>Commit</li>
+                    <li>更改上一次的commit messgage</li>
+                    <li>只有小修正不想重新commit</li>
+                    <li>查看Repository狀態</li>
+                </ul>
+            </li>
+            <li><a href="#section4">遠端操作</a>
+                <ul>
+                    <li>新增遠端節點</li>
+                    <li>刪除遠端節點</li>
+                    <li>檢視遠端節點</li>
+                    <li>上傳</li>
+                    <li>上傳分支</li>
+                    <li>刪除遠端某分支</li>
+                    <li>下載更新（PULL）</li>
+                </ul>
+            </li>
+            <li><a href="#section5">分支</a>
+                <ul>
+                    <li>檢視目前分支</li>
+                    <li>建立分支</li>
+                    <li>刪除分支</li>
+                    <li>切換至某分支</li>
+                    <li>合併分支</li>
+                    <li>檢視已合併的分支</li>
+                </ul>
+            </li>
+            <li><a href="#section6">特殊用途</a>
+                <ul>
+                    <li>GitIgnore</li>
+                    <li>檢視Commit 紀錄</li>
+                    <li>Commit空資料夾</li>
+                    <li>新增標籤</li>
+                    <li>檢視標籤</li>
+                    <li>抓戰犯</li>
+                    <li>暫存</li>
+                    <li>取出暫存</li>
+                    <li>刪除暫存</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header text-center" id="section1">開始之前</div>
+                <ul class="list-group list-group-flush">
+                        <li class="list-group-item">設定你是誰</li>
+                        <p class="codeSnippet">$ git config -global user.name “YourName”</p>
+                        <p class="codeSnippet">$ git config --global user.email "YourEmail"</p>
+                        或
+                        <p class="codeSnippet">$ git config --global --edit</p>
+                        <li class="list-group-item">檢視設定</li>
+                        <p class="codeSnippet">$ git config --list</p>
+                        <p class="codeComment">也可以直接檢視 .git 資料夾下的 config</p>
+                </ul>
+            </div>
+            <div class="card">
+                    <div class="card-header text-center" id="section2">建立或取得Git Repository</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">於當前位子建立 Repository</li>
+                        <p class="codeSnippet">$ git init</p>
+                        <li class="list-group-item">複製遠端 Repository 至本機</li>
+                        <p class="codeSnippet">$ git clone [git-repository-url]</p>
+                    </ul>
+            </div>
+            <div class="card">
+                    <div class="card-header text-center" id="section3">新增檔案</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">將指定檔案add進stage</li>
+                        <p class="codeSnippet">$ git add [filename]</p>
+                        或可使用 * 字元加入所有檔案
+                        <p class="codeSnippet">$ git add *</p>
+                        <li class="list-group-item">add錯檔案想取消（unstage）</li>
+                        <p class="codeSnippet">$ git reset HEAD [filename]</p>
+                        或
+                        <p class="codeSnippet">$ git rm [filename] --cached</p>
+                        <li class="list-group-item">Commit</li>
+                        <p class="codeSnippet">$ git commit -m "commit message"</p>
+                        <li class="list-group-item">更改上一次的commit messgage</li>
+                        <p class="codeSnippet">$ git commit --amend</p>
+                        <li class="list-group-item">只有小修正不想重新commit</li>
+                        <p class="codeSnippet">$ git add [file]</p>
+                        <p class="codeSnippet">$ git commit --amend -m "commit message"</p>
+                        <p class="codeComment">將這次修改並入上次commit</p>
+                        <li class="list-group-item">查看Repository狀態</li>
+                        <p class="codeSnippet">$ git status</p>
+                        <p class="codeComment">能查看目前位於哪個branch，未commit的更變檔案</p>
+                    </ul>
+            </div>
+            <div class="card">
+                <div class="card-header text-center" id="section4">遠端操作</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">新增遠端節點</li>
+                    <p class="codeSnippet">$ git remote add origin</p>
+                    <li class="list-group-item">刪除遠端節點</li>
+                    <p class="codeSnippet">$ git remote rm origin</p>
+                    <li class="list-group-item">檢視遠端節點</li>
+                    <p class="codeSnippet">$ git remote -v</p>
+                    <li class="list-group-item">上傳</li>
+                    <p class="codeSnippet">$ git push [origin master]</p>
+                    <p class="codeComment">此處是指定origin master分支</p>
+                    <li class="list-group-item">上傳分支</li>
+                    <p class="codeSnippet">$ git push origin [brach-name]</p>
+                    <li class="list-group-item">刪除遠端某分支</li>
+                    <p class="codeSnippet">$ git push origin :[branch-name]</p>
+                    <li class="list-group-item">下載更新（PULL）</li>
+                    <p class="codeSnippet">$ git pull [origin master]</p>
+                    <p class="codeComment">可指定特定分支</p>
+                </ul>
+            </div>
+            <div class="card">
+                    <div class="card-header text-center" id="section5">分支</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">檢視目前分支</li>
+                        <p class="codeSnippet">$ git branch</p>
+                        <li class="list-group-item">建立分支</li>
+                        <p class="codeSnippet">$ git branch [branch-name]</p>
+                        <li class="list-group-item">刪除分支</li>
+                        <p class="codeSnippet">git branch -d [branch-name]</p>
+                        <li class="list-group-item">切換至某分支</li>
+                        <p class="codeSnippet">$ git checkout [-b] [branch-name]</p>
+                        <p class="codeComment">若無該分支則建立並切換至該分支：-b</p>
+                        <li class="list-group-item">合併分支</li>
+                        <p class="codeSnippet">git merge [branch-name]</p>
+                        <p class="codeComment">要先 checkout 到要合併的主分支</p>
+                        <li class="list-group-item">檢視已合併的分支</li>
+                        <p class="codeSnippet">$ git branch --merged</p>
+                    </ul>
+            </div>
+            <div class="card">
+                <div class="card-header text-center" id="section6">特殊用途</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">GitIgnore</li>
+                    <p class="codeSnippet">$ echo "node_modules" >> .gitignore</p>
+                    <p class="codeComment">在Repository的根目錄下新增檔案.gitigonre 檔案內容為要忽略的檔案名稱或資料夾，可以避免把一些測試用檔案或npm模組也放入Repository導致肥大。</p>
+                    <li class="list-group-item">檢視Commit 紀錄</li>
+                    <p class="codeSnippet">$ git log [--graph] [--oneline]</p>
+                    <p class="codeComment">檢視分支圖：--graph, 單行檢視：--oneline</p>
+                    <li class="list-group-item">Commit空資料夾</li>
+                    <p class="codeSnippet">$ touch .gitkeep</p>
+                    <p class="codeComment">Git 預設無法commit空資料夾，在資料夾下新增.keep或.gitkeep檔案即可。</p>
+                    <li class="list-group-item">新增標籤</li>
+                    <p class="codeSnippet">$ tag tag [TagName]</p>
+                    <li class="list-group-item">檢視標籤</li>
+                    <p class="codeSnippet">$ git tag</p>
+                    <li class="list-group-item">抓戰犯</li>
+                    <p class="codeSnippet">$ git blame [FileName</p>
+                    <li class="list-group-item">暫存</li>
+                    <p class="codeSnippet">$ git stash save</p>
+                    <li class="list-group-item">取出暫存</li>
+                    <p class="codeSnippet">$ git stach apply</p>
+                    <li class="list-group-item">刪除暫存</li>
+                    <p class="codeSnippet">$ git stach drop</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./gitnote.js"></script>
+</body>
+</html>
