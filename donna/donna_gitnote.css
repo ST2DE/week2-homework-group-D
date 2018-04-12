@@ -73,3 +73,29 @@ li a {
     background: transparent;
     color: #7bc3d1;
     outline: 0; }
+
+/*mynote_style*/
+#gotop {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;    
+    padding: 10px 15px;    
+    font-size: 20px;
+    background: rgba(83, 83, 83, 0.63);
+    color: white;
+    cursor: pointer;
+}
+
+#menu {
+    border: 2px;
+    border-style: none;
+    padding-top: 10px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+}
+
+.content {
+    margin-left: 200px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donna的Git筆記</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="css" href="./donna_gitnote.css">
+    <!--Start:插入jQuery-->
+        <script src='http://code.jquery.com/jquery-1.11.2.min.js'/>
+    <!--End:插入jQuery-->
+    <!--Start:插入TOP套件-->
+        <script type="text/javascript">
+            $(function(){
+                $("#gotop").click(function(){
+                    jQuery("html,body").animate({
+                        scrollTop:0
+                    },1000);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300){
+                        $('#gotop').fadeIn("fast");
+                    } else {
+                        $('#gotop').stop().fadeOut("fast");
+                    }
+                });
+            });
+        </script>
+    <!--END:插入TOP套件-->
+</head>
+<body>
+<!--bar-->
+    <div id="nav">
+        <nav class="navbar nav-custom">
+            <div class="navbar-header">
+                <a class="nav-home page-scroll" href="#">D.Team</a></div>
+            <!--Collect the nav links, forms, and other content for toggling-->
+            <div class="navbar-right">
+            <ul>
+                <li><a class="page-scroll" href="">Haikyo  </a></li>
+                <li><a class="page-scroll" href="../Tweety/Tweety_git_note.html">Tweety  </a></li>
+                <li><a class="page-scroll" href="../ming/gitnote.html">Ming  </a></li>
+                <li><a class="page-scroll" href="../donna/donna_gitnote.html">Donna  </a></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+<!--mynote-->
+
+
+    <div id="menu">
+        <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">
+                test
+            </button>    
+            <div id="demo" class="collapse in">
+                test
+            </div>
+    </div>
+    
+    <div class="content">
+        <div class="jumbotron">
+            <h1 class="display-4">安安你好</h1>
+            <p class="lead">歡迎來到Donna的Git筆記。<br>還有很多不足的地方，請多多指教！</p>
+        </div>
+    </div>
+
+    
+
+
+    <b:if cond='data:blog.isMobile'> 
+    <b:else/>
+    <div id='gotop' ><center>^</center></div> 
+    </b:if>
+</body>
+</html>
