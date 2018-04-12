@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Tweety的git筆記</title>
+    <style>
+        body{
+            font-family: Microsoft JhengHei;
+        }
+        h5 .btn{
+            font-size: 40px;
+            text-decoration: none;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+   <div class="container mt-2">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            基礎設定
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>查詢版本:
+                                <br>git version</li>
+                            <li>查詢設定列表:
+                                <br>git config --list</li>
+                            <li>輸入姓名:
+                                <br>git config --global user.name "你的名字"</li>
+                            <li>輸入email:
+                                <br>git config --global user.email "你的email"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            新增本地/遠端數據庫
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>在本地資料夾新增數據庫:
+                                <br>git init</li>
+                            <li>複製遠端數據庫:
+                                <br>git clone 遠端數據庫網址</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            增加/刪除檔案
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>增加檔案進入索引:
+                                <br>git add 檔案名稱</li>
+                            <li>增加全部檔案進入索引:
+                                <br>git add .</li>
+                            <li> 查詢狀態:
+                                <br>git status</li>
+                            <li>顯示歷史紀錄:
+                                <br>git log</li>
+                            <li>將索引提交到數據庫:
+                                <br>git commit -m '更新訊息'</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingfour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+                            還原指令
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>還原工作目錄與索引，會跟最後一次 commit 保持一樣:
+                                <br>git reset --hard</li>
+                            <li>全部檔案取消索引:
+                                <br>git reset HEAD</li>
+                            <li>單一檔案取消索引:
+                                <br>git reset HEAD 檔案名稱</li>
+                            <li>恢復單一檔案到最新 commit 狀態:
+                                <br>git checkout 檔案名稱</li>
+                            <li>刪除最近一次 commit:
+                                <br>git reset --hard "HEAD^"</li>
+                            <li>上面語法如果刪除錯了可以再用此語法還原:
+                                <br>git reset --hard ORIG_HEAD</li>
+                            <li>刪除最近一次 commit，但保留異動內容:
+                                <br>git reset --soft "HEAD^"</li>
+                            <li>commit 後發現有幾個檔案忘了加入進去，想要補內容進去時:
+                                <br>git commit --amend</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingfive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                            分支
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>顯示所有本地分支:
+                                <br>git branch</li>
+                            <li>新增分支:
+                                <br>git branch 分支名稱</li>
+                            <li>切換分支:
+                                <br> git checkout 分支名稱</li>
+                            <li>合併指定分支到目前的分支:
+                                <br>git merge 分支名稱</li>
+                            <li>刪除分支:
+                                <br>git branch -d 分支名稱</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingsix">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+                            遠端數據庫操作
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>複製遠端數據庫:
+                                <br>git clone 遠端數據庫網址</li>
+                            <li>查詢遠端數據庫:
+                                <br>git remote</li>
+                            <li>將本地分支推送到遠端分支:
+                                <br>git push 遠端數據庫名稱 遠端分支名稱</li>
+                            <li>將遠端分支拉下來與本地分支進行合併:
+                                <br>git pull</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingseven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseseven" aria-expanded="true" aria-controls="collapseseven">
+                            標籤
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>查詢標籤:
+                                <br>git tag</li>
+                            <li>查詢詳細標籤:
+                                <br>git tag -n</li>
+                            <li>刪除標籤:
+                                <br>git tag -d 標籤名稱</li>
+                            <li>新增輕量標籤:
+                                <br>git tag 標籤名稱</li>
+                            <li>新增標示標籤:
+                                <br>git tag -am "備註內容" 標籤名稱</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingeight">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseeight" aria-expanded="true" aria-controls="collapseeight">
+                            暫存
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseeight" class="collapse" aria-labelledby="headingeight" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>暫時儲存當前目錄:
+                                <br>git stash</li>
+                            <li>瀏覽 stash 列表:
+                                <br>git stash list</li>
+                            <li>還原暫存:
+                                <br>git stash pop</li>
+                            <li>清除最新暫存:
+                                <br>git stash drop</li>
+                            <li>清除全部暫存:
+                                <br>git stash clear</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
