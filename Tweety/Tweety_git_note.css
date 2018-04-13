@@ -73,21 +73,3 @@ li a {
     background: transparent;
     color: #7bc3d1;
     outline: 0; }
-
-.container {
-  margin-top:8%;
-}
-
-.card {
-  height: 250px;
-  margin-bottom:5%;
-}
-
-.card-text {
-  border-top: 1px solid #6a7679;
-  padding: 10px 0;
-  overflow-y: scroll;
-
-}
-
-
