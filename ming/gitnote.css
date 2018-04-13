@@ -80,10 +80,9 @@ li a {
 #side-bar-menu {
   border: 1px dotted gray;
   border-radius:5px;
-  padding-left:10px;
-  padding-top:10px; 
+  padding:10px;
   box-shadow: 0 0 10px rgba(0,0,0,.2);
-  height:100%;
+  height:auto;
   width:160px;
   position: fixed;
 }
@@ -109,4 +108,9 @@ li a {
   content: 'NOTE: ';
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 0 10px;
+}
+
+.folded {
+  display: none;
+  transition: all .5s;
 }
