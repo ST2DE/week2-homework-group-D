@@ -73,21 +73,40 @@ li a {
     background: transparent;
     color: #7bc3d1;
     outline: 0; }
-
 .container {
-  margin-top:8%;
+  margin-top:80px;
 }
 
-.card {
-  height: 250px;
-  margin-bottom:5%;
+#side-bar-menu {
+  border: 1px dotted gray;
+  border-radius:5px;
+  padding-left:10px;
+  padding-top:10px; 
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  height:100%;
+  width:160px;
+  position: fixed;
 }
 
-.card-text {
-  border-top: 1px solid #6a7679;
-  padding: 10px 0;
-  overflow-y: scroll;
-
+.main-content {
+  margin-left:160px;
+  padding-left:20px;
 }
 
+.codeSnippet {
+  background: #262626;
+  color:#eeeeee;
+  padding: 5px 0;
+  margin: 5px 0;
+}
 
+.codeComment {
+  font-size: 0.8em;
+  color: #339988;
+}
+
+.codeComment::before {
+  content: 'NOTE: ';
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0 10px;
+}
