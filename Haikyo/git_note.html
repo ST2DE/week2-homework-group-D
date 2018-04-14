@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haikyo's Git Learning Note</title>
+    <link rel="stylesheet" href="./git_note.css">
+</head>
+
+<body>
+    <div id="nav">
+        <nav class="navbar nav-custom">
+            <div class="navbar-header">
+                <a class="nav-home page-scroll" href="#">D.Team</a>
+            </div>
+            <!--Collect the nav links, forms, and other content for toggling-->
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <a class="page-scroll" href="">Haikyo </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="./Tweety/">Tweety </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="./ming/">Ming </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="">Donna </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div id="note">
+            <h1>設定</h1>
+            <p>
+                <pre>
+                    <code>
+    $ git config --global user.name "DyslexiaS"
+    $ git config --global user.email "exist02593@gmail.com"
+                    </code>
+                </pre>
+            </p>
+            <p>加上 --global 表示是全域的設定</p>
+            <p>使用 git config --list這個指令來看你的 Git 設定內容：</p>
+            <p>
+                <pre>
+                        <code>
+    $ git config --list
+      user.name=DyslexiaS
+      user.email=exist02593@gmail.com
+                        </code>
+                    </pre>
+            </p>
+
+            <h1>基本語法及操作</h1>
+            <p>
+                git init : 建立新的 Repository
+                <br>git clone : 複製別人的 Repository
+            </p>
+            <h2>staged</h2>
+            <p>檔案會有4種不同的檔案狀態</p>
+            <ul>
+                <li>未追蹤(Untracked files)：
+                    <br><p>在版本提交後才又加進來的檔案，這些檔案並沒有被GIT所追蹤控管</p></li>
+                <li>已更改(Changes not staged for commit)：
+                    <br>已提交版本後，卻又再次修改，這些檔案會被丟回工作目錄(WD)</li>
+                <li>等待提交(Changes to be committed)：
+                    <br>在工作目錄(WD)的檔案執行git add後，會放在暫存區(Stage)。這些放在暫存區的檔案狀態便是等待提交囉！</li>
+                <li>已提交(Committed)：
+                    <br>在暫存區(Stage)的檔案執行git commit後，檔案便置於儲存區(Repo)，這些放在儲存區的檔案即是已提交的狀態。</li>
+            </ul>
+            <h3>git status: 檢查目前 Git 的狀態</h3>
+            <p>git diff 可以看到所有追蹤檔案被修改的內容</p>
+            <p>git diff file 可以看到該檔案被修改的內容</p>
+            <h3>git add</h3>
+            <p>新增的file會是Untracked files (未被追蹤的檔案)，使用 git add 把它加入追蹤</p>
+            <p>git add . 或是 -A --all可以一次add所有的file</p>
+            <h3>git commit</h3>
+            <p>讓未來想要回溯時可以選擇的節點</p>
+            <p>git commit -m "message" 不啟動文字模式提交</p>
+            <p>git log 檢視提交歷史訊息</p>
+            <h2>branch</h2>
+            <h3>Git branch</h3>
+            <p>多人專案開發過程中，開發新功能時會從主分支開出一條新的分支來做修改，修改或開發完成後再 merge回主分支</p>
+            <p>git branch 列出所有以及現在所在的branch</p>
+            <p>git branch moose 會開出新的branch名稱叫moose</p>
+            <p>git checkout moose 可以切換到moose的branch</p>
+            <p>git push origin --delete
+                <branchName> 刪除分支</p>
+            <h2>merge</h2>
+            <pre>
+                <code>
+    master 要去合併 moose 分支
+    git checkout master
+    git merge moose
+                </code>
+            </pre>
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
