@@ -74,18 +74,95 @@ li a {
     color: #7bc3d1;
     outline: 0; }
 
-.container {
-  margin-top:8%;
+
+/*mynote_style*/
+#container {
+  margin-top: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
-.card {
-  height: 250px;
-  margin-bottom:5%;
+#gotop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;    
+  padding: 10px 15px;    
+  font-size: 20px;
+  background: #777;
+  color: white;
+  cursor: pointer;
 }
 
-.card-text {
-  border-top: 1px solid #6a7679;
-  padding: 10px 0;
-  overflow-y: scroll;
+#content {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+  font-size: medium;
+  line-height: 24px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(180, 180, 180, 0.432);
+}
 
+#but1 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#but2 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#but3 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#but4 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#but5 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#but6 {
+  margin: 10px;
+  width: 95%;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(78, 198, 214, 0.644);
+}
+
+#menu {
+  width: 80%;
+}
+
+.codeStyle {
+  border: 2px none;
+  border-radius: 3px;
+  width: fit-content;
+  background-color: rgba(207, 207, 207, 0.726);
+  padding: 3px;
+  margin: 2px;
 }
