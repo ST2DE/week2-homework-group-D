@@ -100,6 +100,12 @@ pre {
 code {
   float: left;
 }
-li{
+li {
   margin: 5px 1px;
+  list-style-type: disc;
+}
+.block {
+  background-color: #EAF0CE;
+  border-radius: .4em;
+  padding: 20px;
 }
