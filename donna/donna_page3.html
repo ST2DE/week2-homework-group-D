@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donna的Git筆記</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./donna_gitnote.css">
+<!--引入bootstrap-->
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--bar-->
+    <div id="nav">
+        <nav class="navbar nav-custom">
+            <div class="navbar-header">
+                <a class="nav-home page-scroll" href="../index.html">D.Team</a></div>
+            <!--Collect the nav links, forms, and other content for toggling-->
+            <div class="navbar-right">
+            <ul>
+                <li><a class="page-scroll" href="../Haikyo/git_note.html">Haikyo  </a></li>
+                <li><a class="page-scroll" href="../Tweety/index.html">Tweety  </a></li>
+                <li><a class="page-scroll" href="../ming/index.html">Ming  </a></li>
+                <li><a class="page-scroll" href="../donna/donna_gitnote.html">Donna  </a></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+<!--mynote-->
+    <div id="container">
+        <!--top-->
+        <ul class="nav nav-tabs">
+            <li><a href="./donna_gitnote.html">Home</a></li>
+            <li><a href="./doona_page1.html">建構Git環境</a></li>
+            <li><a href="./donna_page2.html">Git倉儲</a></li>
+            <li class="active"><a href="./donna_page3.html">基本指令</a></li>
+        </ul>
+        <!--main-->
+        <div id="content">
+            <div id="menu">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but3">上傳檔案</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but4">更新倉儲</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but5">其他常用指令</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but6">分支相關指令</button>
+            </div>
+            <div id="but3" class="collapse">
+                在local端完成編輯後，要把檔案上傳到遠端時，會有幾個步驟：<br>
+                <div class="codeStyle">git add [filename] / $ git add .</div>
+                <div class="codeStyle">git commit</div>
+                <div class="codeStyle">git push</div>
+                首先我們要使用$ git add來把我們需要上傳的檔案加入追蹤。<br>
+                如果只有個別幾個檔案需要上傳時用$ git add [filename]，假如全部的檔案都需要上傳則使用$ git add .。<br>
+                追蹤完成後，需要用git commit把已追蹤的檔案打包起來，並且備註已修改的內容。<br>
+                最後使用$ git push把檔案上傳至遠端伺服器。<br>
+            </div>
+            <div id="but4" class="collapse">
+                如果local端已經有倉儲了，需要把遠端新的commi的數據下載時：<br>
+                <div class="codeStyle">git pull</div>
+                多人合作的專案經常會上傳遠端進行備份，因此同一個專案有可能在同時間會有不同人在編輯內容。<br>
+                當我們在local端完成編輯並打算上傳至遠端時，很有可能會失敗。<br>
+                原因在於Git為了避免專案的版本亂掉，當有檔案上傳時會先確認該版本是最新的。<br>
+                如果發現到local端裡有一些新的commit數據不在時，Git便會阻止上傳。<br>
+                因此我們要用$ git pull指令，來把遠端的所有數據再下載下來，並與local端的項目合併起來，以確保我們上傳的檔案都是最新的。<br>
+            </div>
+            <div id="but5" class="collapse">
+                查看目錄下有哪些檔案：<br>
+                <div class="codeStyle">ls</div><br>
+                查看目錄下檔案的狀況（可以看到哪些檔案有被add）：<br>
+                <div class="codeStyle">git status</div><br>
+                在當前目錄下建立新的資料夾：<br>
+                <div class="codeStyle">mkdir [folder name]</div><br>
+                在當前目錄下建立新的檔案：<br>
+                <div class="codeStyle">touch [(file name).(file extension)]</div><br>
+                進入特定的資料夾：<br>
+                <div class="codeStyle">cd [folder name]</div><br>
+                回到上一個資料夾：<br>
+                <div class="codeStyle">cd ..</div><br>
+                刪除檔案：<br>
+                -假如檔案沒有上傳到遠端過：<br>
+                <div class="codeStyle">rm [file/folder name] -rf</div>
+                -假如檔案已經有上傳過遠端：<br>
+                <div class="codeStyle">git rm [file/folder name] -rf</div>
+                加上-rf指令是指強勢刪除，並且把資料夾下的子目錄一併刪除。<br><br>
+                看看自己剛才做了什麼好事：<br>
+                <div class="codeStyle">git log</div>
+            </div>
+            <div id="but6" class="collapse">
+                查看目前所在的分支：<br>
+                <div class="codeStyle">git branch</div>
+                前面帶 * 號的則是所在的分支。<br><br>
+                查看有哪些分支（包括local跟遠端）：<br>
+                <div class="codeStyle">git branch -a</div><br>
+                在local端創建新的分支：<br>
+                <div class="codeStyle">git branch [branch name]</div><br>
+                切換到local別的分支：<br>
+                <div class="codeStyle">git checkout [branch name]</div><br>
+                上傳至遠端分支：<br>
+                <div class="codeStyle">git push [remote name] [branch name]</div><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
