@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./donna_gitnote.css">
 <!--引入bootstrap-->
-    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--Start:插入jQuery-->
     <script src='http://code.jquery.com/jquery-1.11.2.min.js'/>
 <!--End:插入jQuery-->
@@ -56,17 +56,40 @@
 
         <!--top-->
         <ul class="nav nav-tabs">
-            <li class="active"><a href="./donna_gitnote.html">Home</a></li>
+            <li><a href="./donna_gitnote.html">Home</a></li>
             <li><a href="./doona_page1.html">建構Git環境</a></li>
-            <li><a href="./donna_page2.html">Git倉儲</a></li>
+            <li class="active"><a href="./donna_page2.html">Git倉儲</a></li>
             <li><a href="./donna_page3.html">基本指令</a></li>
         </ul>
 
         <!--main-->
-        <div class="jumbotron" style="margin-top:30px; margin-left:50px; margin-right:50px;">
-            <h1 class="display-4">安安你好</h1>
-            <p class="lead">歡迎來到Donna的Git筆記。<br>還有很多不足的地方，請多多指教！</p>
+        <div id="content">
+            <p>
+                當開始一個新的專案時，我們可以選擇要建立還是連接倉儲。<br>
+            </p>
+
+            <div id="menu">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but1">建立倉儲</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but2">連接倉儲</button>
+            </div>
+
+            <div id="but1" class="collapse">
+                建立一個新的倉儲，就是把local端的專案push到遠端，使用指令：<br>
+                <div class="codeStyle">git init</div>
+                這個指令會在local端的專案裡建立一個.git的子資料夾，裡面包含了匯入Git所需要的檔案。<br>
+                之後可以利用$ git add來追蹤想要上傳到Git的檔案，再使用$ git commit把已追蹤的檔案進行打包。<br>
+                打包完成後，使用$ git push指令來把已打包的檔案從local端匯入Git。
+            </div>
+
+            <div id="but2" class="collapse">
+                要取得已在Git上的專案，就是要把檔案下載(即clone)到local端，使用指令：<br>
+                <div class="codeStyle">git clone [url]</div>
+                這個指令會把遠端的專案全部的資料夾clone到local端，並且能在local進行編輯。
+            </div>
+
         </div>
+
+
 
     </div>
 
