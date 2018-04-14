@@ -11,28 +11,6 @@
 <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--Start:插入jQuery-->
-    <script src='http://code.jquery.com/jquery-1.11.2.min.js'/>
-<!--End:插入jQuery-->
-<!--Start:往頂部箭頭Jquery碼-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("#gotop").click(function(){
-                jQuery("html,body").animate({
-                    scrollTop:0
-                },1000);
-            });
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 300){
-                    $('#gotop').fadeIn("fast");
-                } else {
-                    $('#gotop').stop().fadeOut("fast");
-                }
-            });
-        });
-    </script>
-<!--END:往頂部箭頭-->
 </head>
 <body>
 <!--bar-->
@@ -44,8 +22,8 @@
             <div class="navbar-right">
             <ul>
                 <li><a class="page-scroll" href="">Haikyo  </a></li>
-                <li><a class="page-scroll" href="../Tweety/Tweety_git_note.html">Tweety  </a></li>
-                <li><a class="page-scroll" href="../ming/gitnote.html">Ming  </a></li>
+                <li><a class="page-scroll" href="../Tweety/index.html">Tweety  </a></li>
+                <li><a class="page-scroll" href="../ming/index.html">Ming  </a></li>
                 <li><a class="page-scroll" href="../donna/donna_gitnote.html">Donna  </a></li>
             </ul>
             </div>
@@ -53,7 +31,6 @@
     </div>
 <!--mynote-->
     <div id="container">
-
         <!--top-->
         <ul class="nav nav-tabs">
             <li><a href="./donna_gitnote.html">Home</a></li>
@@ -61,7 +38,6 @@
             <li><a href="./donna_page2.html">Git倉儲</a></li>
             <li><a href="./donna_page3.html">基本指令</a></li>
         </ul>
-
         <!--main-->
         <div id="content">
             <p>
@@ -71,15 +47,6 @@
                 下載適合自己電腦作業系統的版本，安裝並註冊帳號。<br>
             </p>
         </div>
-
-
-
     </div>
-
-    
-    <div id="gotop">˄</div>
-
-
-
 </body>
 </html>

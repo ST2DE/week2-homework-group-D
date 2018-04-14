@@ -11,28 +11,6 @@
 <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--Start:插入jQuery-->
-    <script src='http://code.jquery.com/jquery-1.11.2.min.js'/>
-<!--End:插入jQuery-->
-<!--Start:往頂部箭頭Jquery碼-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("#gotop").click(function(){
-                jQuery("html,body").animate({
-                    scrollTop:0
-                },1000);
-            });
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 300){
-                    $('#gotop').fadeIn("fast");
-                } else {
-                    $('#gotop').stop().fadeOut("fast");
-                }
-            });
-        });
-    </script>
-<!--END:往頂部箭頭-->
 </head>
 <body>
 <!--bar-->
@@ -44,8 +22,8 @@
             <div class="navbar-right">
             <ul>
                 <li><a class="page-scroll" href="">Haikyo  </a></li>
-                <li><a class="page-scroll" href="../Tweety/Tweety_git_note.html">Tweety  </a></li>
-                <li><a class="page-scroll" href="../ming/gitnote.html">Ming  </a></li>
+                <li><a class="page-scroll" href="../Tweety/index.html">Tweety  </a></li>
+                <li><a class="page-scroll" href="../ming/index.html">Ming  </a></li>
                 <li><a class="page-scroll" href="../donna/donna_gitnote.html">Donna  </a></li>
             </ul>
             </div>
@@ -53,7 +31,6 @@
     </div>
 <!--mynote-->
     <div id="container">
-
         <!--top-->
         <ul class="nav nav-tabs">
             <li><a href="./donna_gitnote.html">Home</a></li>
@@ -61,18 +38,15 @@
             <li class="active"><a href="./donna_page2.html">Git倉儲</a></li>
             <li><a href="./donna_page3.html">基本指令</a></li>
         </ul>
-
         <!--main-->
         <div id="content">
             <p>
                 當開始一個新的專案時，我們可以選擇要建立還是連接倉儲。<br>
             </p>
-
             <div id="menu">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but1">建立倉儲</button>
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#but2">連接倉儲</button>
             </div>
-
             <div id="but1" class="collapse">
                 建立一個新的倉儲，就是把local端的專案push到遠端，使用指令：<br>
                 <div class="codeStyle">git init</div>
@@ -80,23 +54,12 @@
                 之後可以利用$ git add來追蹤想要上傳到Git的檔案，再使用$ git commit把已追蹤的檔案進行打包。<br>
                 打包完成後，使用$ git push指令來把已打包的檔案從local端匯入Git。
             </div>
-
             <div id="but2" class="collapse">
                 要取得已在Git上的專案，就是要把檔案下載(即clone)到local端，使用指令：<br>
                 <div class="codeStyle">git clone [url]</div>
                 這個指令會把遠端的專案全部的資料夾clone到local端，並且能在local進行編輯。
             </div>
-
         </div>
-
-
-
     </div>
-
-    
-    <div id="gotop">˄</div>
-
-
-
 </body>
 </html>
